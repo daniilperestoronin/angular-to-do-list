@@ -1,20 +1,82 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div>
 
+  <mat-toolbar color="primary">
+    <span>
+      <img style="margin-top: 5px" width="60" alt="Angular Logo"
+           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    </span>
+    <span>Angular To-do list</span>
+  </mat-toolbar>
+
+  <div style="margin: 20px 40px 20px 40px;">
+    <form class="example-form">
+      <mat-form-field class="example-small-width">
+        <input matInput placeholder="Name" value="...">
+      </mat-form-field>
+      <mat-form-field class="example-small-width">
+        <input matInput placeholder="Comment" value="...">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Content"></textarea>
+      </mat-form-field>
+    </form>
+    <mat-button-toggle-group style="float: right">
+      <mat-button-toggle>Clear</mat-button-toggle>
+      <mat-button-toggle>Add</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div style="margin: 65px 40px 20px 40px;">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Task name 1
+          </mat-panel-title>
+          <mat-panel-description>
+            Task comment 1
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-action-row>
+          <button mat-button>Done</button>
+          <button mat-button>Remove</button>
+        </mat-action-row>
+        <p>Bla - bla - bla 1</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Task name 2
+          </mat-panel-title>
+          <mat-panel-description>
+            Task comment 2
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-action-row>
+          <button mat-button>Done</button>
+          <button mat-button>Remove</button>
+        </mat-action-row>
+        <p>Bla - bla - bla 2</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Task name 3
+          </mat-panel-title>
+          <mat-panel-description>
+            Task comment 3
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-action-row>
+          <button mat-button>Done</button>
+          <button mat-button>Remove</button>
+        </mat-action-row>
+        <p>Bla - bla - bla 3</p>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </div>
+</div>
