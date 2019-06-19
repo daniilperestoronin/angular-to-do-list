@@ -29,7 +29,8 @@
 
   <div style="margin: 65px 40px 20px 40px;">
     <mat-accordion>
-      <mat-expansion-panel *ngFor="let todoElement of todoList">
+      <mat-expansion-panel *ngFor="let todoElement of todoList"
+                           [ngStyle]="{'background': todoElement.isDone ? 'darkgray': ''}">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{todoElement.name}}
@@ -39,8 +40,9 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-action-row>
-          <button mat-button>Done</button>
-          <button mat-button>Remove</button>
+          <button *ngIf="!todoElement.isDone" mat-button (click)="switchIsDoneTodo(todoElement)">Done</button>
+          <button *ngIf="todoElement.isDone" mat-button (click)="switchIsDoneTodo(todoElement)">Undone</button>
+          <button mat-button (click)="removeTodo(todoElement)">Remove</button>
         </mat-action-row>
         <p>{{todoElement.content}}</p>
       </mat-expansion-panel>
