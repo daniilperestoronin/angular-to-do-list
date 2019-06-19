@@ -30,7 +30,7 @@
   <div style="margin: 65px 40px 20px 40px;">
     <mat-accordion>
       <mat-expansion-panel *ngFor="let todoElement of todoList"
-                           [ngStyle]="{'background': todoElement.isDone ? 'darkgray': ''}">
+                           [ngStyle]="{'background': todoElement.isDone ? '#EEEEEE': ''}">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{todoElement.name}}
