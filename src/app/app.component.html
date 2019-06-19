@@ -12,18 +12,18 @@
   <div style="margin: 20px 40px 20px 40px;">
     <form class="example-form">
       <mat-form-field class="example-small-width">
-        <input matInput placeholder="Name" value="...">
+        <input matInput placeholder="Name" [value]="newTodo.name" (input)="newTodo.name = $event.target.value">
       </mat-form-field>
       <mat-form-field class="example-small-width">
-        <input matInput placeholder="Comment" value="...">
+        <input matInput placeholder="Comment" [value]="newTodo.comment" (input)="newTodo.comment = $event.target.value">
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Content"></textarea>
+        <textarea matInput placeholder="Content" [value]="newTodo.content" (input)="newTodo.content = $event.target.value"></textarea>
       </mat-form-field>
     </form>
     <mat-button-toggle-group style="float: right">
-      <mat-button-toggle>Clear</mat-button-toggle>
-      <mat-button-toggle>Add</mat-button-toggle>
+      <mat-button-toggle (click)="clearTodo()">Clear</mat-button-toggle>
+      <mat-button-toggle (click)="addTodo()">Add</mat-button-toggle>
     </mat-button-toggle-group>
   </div>
 

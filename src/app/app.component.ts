@@ -6,7 +6,11 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-to-do-list-new';
+  newTodo = {
+    name: 'Task',
+    comment: 'comment',
+    content: 'content'
+  };
   todoList = [
     {
       name: 'Task 1',
@@ -29,4 +33,21 @@ export class AppComponent {
       content: 'content 4'
     }
   ];
+
+  addTodo() {
+    this.todoList.push({
+      name: this.newTodo.name,
+      comment: this.newTodo.comment,
+      content: this.newTodo.content
+    });
+    this.clearTodo();
+  }
+
+  clearTodo() {
+    this.newTodo = {
+      name: '',
+      comment: '',
+      content: ''
+    };
+  }
 }
